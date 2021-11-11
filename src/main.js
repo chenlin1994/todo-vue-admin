@@ -4,44 +4,42 @@ import router from './router'
 import store from './store'
 import ViewUI from 'view-design'
 import Valid from './utils/valid'
-
+import { Table, Button } from 'ant-design-vue'
 import '@/styles/base.scss'
 import 'view-design/dist/styles/iview.css'
 
-Vue.use(ViewUI);
-
-Vue.prototype.$Valid = Valid;
+Vue.use(ViewUI)
+Vue.component(Button.name, Button)
+Vue.component(Table.name, Table)
+Vue.prototype.$Valid = Valid
 
 Vue.config.productionTip = false
-
 // 实现全局路由守卫
 router.beforeEach((to, from, next) => {
-	if (to.meta.title) {
-	  document.title = to.meta.title;
-	}
-
-	if (to.meta.requireAuth) {
-		if (store.state.userInfo.data.token) {
-			if (to.path == '/login') {
-        next('/');
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  if (to.meta.requireAuth) {
+    if (store.state.userInfo.data.token) {
+      if (to.path == '/login') {
+        next('/')
       } else {
-        next();
+        next()
       }
-		} else {
-			next('/login');
-		}
-	} else {
-		if (store.state.userInfo.data.token) {
-			next('/');
-		} else {
-			next();
-		}
-	}
-
+    } else {
+      next('/login')
+    }
+  } else {
+    if (store.state.userInfo.data.token) {
+      next('/')
+    } else {
+      next()
+    }
+  }
 })
 
 new Vue({
   router,
   store,
-  render: h => h(App),
+  render: (h) => h(App),
 }).$mount('#app')

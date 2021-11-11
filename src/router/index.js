@@ -9,8 +9,8 @@ const routes = [
     name: 'Login',
     component: () => import('@/views/Login.vue'),
     meta: {
-      title: '登录界面'
-    }
+      title: '登录界面',
+    },
   },
   {
     path: '/',
@@ -18,19 +18,30 @@ const routes = [
     component: () => import('@/views/Home.vue'),
     meta: {
       title: '首页',
-      requireAuth: true
-    }
+      requireAuth: true,
+    },
+    children: [
+      {
+        path: '',
+        name: 'view-design',
+        component: () => import('@/views/pages/view-design.vue'),
+        meta: {
+          title: '首页',
+          requireAuth: true,
+        },
+      },
+    ],
   },
   {
     path: '**',
-    redirect: '/'
-  }
+    redirect: '/',
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 })
 
 export default router

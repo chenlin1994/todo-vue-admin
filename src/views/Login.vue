@@ -267,7 +267,7 @@ export default {
           this.clearInput();
           this.$Message.success('登录成功');
           this.$store.dispatch('userInfo/saveInfo', res.data);
-          this.$router.push('/home');
+          this.$router.push('/');
         } else {
           this.$Message.error(res.msg);
         }
