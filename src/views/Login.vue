@@ -331,8 +331,8 @@ export default {
       // 保存的天数
       exdate.setTime(exdate.getTime() + 24 * 60 * 60 * 1000 * exdays); 
       // 字符串拼接cookie
-      window.document.cookie = 'userName' + '=' + user_name + ';path=/;expires=' + exdate.toUTCString();
-      window.document.cookie = 'userPwd' + '=' + user_pwd + ';path=/;expires=' + exdate.toUTCString();
+      // window.document.cookie = 'userName' + '=' + user_name + ';path=/;expires=' + exdate.toUTCString();
+      // window.document.cookie = 'userPwd' + '=' + user_pwd + ';path=/;expires=' + exdate.toUTCString();
     },
 
     // 读取cookie
