@@ -24,7 +24,8 @@ export default {
     Footer,
   },
   computed: {},
-  created() {},
+  created() {
+  },
 }
 </script>
 

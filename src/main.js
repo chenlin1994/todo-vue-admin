@@ -4,15 +4,51 @@ import router from './router'
 import store from './store'
 import ViewUI from 'view-design'
 import Valid from './utils/valid'
-import { Table, Button } from 'ant-design-vue'
+import {
+  Row,
+  Col,
+  Form,
+  Checkbox,
+  DatePicker,
+  Divider,
+  Input,
+  Modal,
+  Radio,
+  Select,
+  Switch,
+  Table,
+  Transfer,
+  TreeSelect,
+  Tree,
+  Upload,
+  Button,
+  Pagination,
+  Message
+} from 'ant-design-vue'
 import '@/styles/base.scss'
 import 'view-design/dist/styles/iview.css'
 
 Vue.use(ViewUI)
-Vue.component(Button.name, Button)
+Vue.component(Row.name, Row)
+Vue.component(Col.name, Col)
+Vue.component(Form.name, Form)
+Vue.component(Checkbox.name, Checkbox)
+Vue.component(DatePicker.name, DatePicker)
+Vue.component(Divider.name, Divider)
+Vue.component(Input.name, Input)
+Vue.component(Modal.name, Modal)
+Vue.component(Radio.name, Radio)
+Vue.component(Select.name, Select)
+Vue.component(Switch.name, Switch)
 Vue.component(Table.name, Table)
+Vue.component(Transfer.name, Transfer)
+Vue.component(TreeSelect.name, TreeSelect)
+Vue.component(Tree.name, Tree)
+Vue.component(Upload.name, Upload)
+Vue.component(Button.name, Button)
+Vue.component(Pagination.name, Pagination)
 Vue.prototype.$Valid = Valid
-
+Vue.prototype.$message = Message
 Vue.config.productionTip = false
 // 实现全局路由守卫
 router.beforeEach((to, from, next) => {

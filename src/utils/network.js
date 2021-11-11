@@ -56,5 +56,27 @@ service.interceptors.response.use(
     return Promise.reject(error)
   }
 )
+const postAction = (url,data={}) => service({
+  method:'post',
+  url:url,
+  data:data
+})
+const getAction = (url,data={}) => service({
+  method:'get',
+  url:url,
+  params:data
+})
+const putAction = (url,data={}) => service({
+  method:'put',
+  url:url,
+  params:data
+})
+const deleteAction = (data) => service({
+  method:'delete',
+  url:url,
+  
+})
+export {
 
+}
 export default service;

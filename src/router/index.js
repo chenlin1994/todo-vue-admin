@@ -16,17 +16,27 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import('@/views/Home.vue'),
+    redirect:'/view-design',
     meta: {
       title: '首页',
       requireAuth: true,
     },
     children: [
       {
-        path: '',
+        path: 'view-design',
         name: 'view-design',
         component: () => import('@/views/pages/view-design.vue'),
         meta: {
-          title: '首页',
+          title: 'view-design',
+          requireAuth: true,
+        },
+      },
+      {
+        path: 'ant-design-vue',
+        name: 'ant-design-vue',
+        component: () => import('@/views/pages/ant-design-vue.vue'),
+        meta: {
+          title: 'ant-design-vue',
           requireAuth: true,
         },
       },
