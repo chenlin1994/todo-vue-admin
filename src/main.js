@@ -8,6 +8,7 @@ import {
   Row,
   Col,
   Form,
+  Tooltip,
   Checkbox,
   DatePicker,
   Divider,
@@ -23,11 +24,13 @@ import {
   Upload,
   Button,
   Pagination,
-  Message
+  Message,
+  FormModel,
+  Icon
 } from 'ant-design-vue'
 import '@/styles/base.scss'
 import 'view-design/dist/styles/iview.css'
-
+import EditTable from '@/components/EditTable'
 Vue.use(ViewUI)
 Vue.component(Row.name, Row)
 Vue.component(Col.name, Col)
@@ -47,6 +50,10 @@ Vue.component(Tree.name, Tree)
 Vue.component(Upload.name, Upload)
 Vue.component(Button.name, Button)
 Vue.component(Pagination.name, Pagination)
+Vue.component(Tooltip.name, Tooltip)
+Vue.component(FormModel.name,FormModel)
+Vue.component(Icon.name,Icon)
+Vue.use(EditTable)
 Vue.prototype.$Valid = Valid
 Vue.prototype.$message = Message
 Vue.config.productionTip = false

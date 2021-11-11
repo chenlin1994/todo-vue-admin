@@ -77,6 +77,9 @@ const deleteAction = (data) => service({
   
 })
 export {
-
+  getAction,
+  postAction,
+  putAction,
+  deleteAction
 }
 export default service;

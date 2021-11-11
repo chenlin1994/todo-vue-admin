@@ -16,7 +16,7 @@ module.exports = {
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'less',
-      patterns: []
+      patterns: [],
     },
   },
   chainWebpack(config) {
@@ -44,6 +44,12 @@ module.exports = {
         // pathRewrite: {
         //   "^/api": "/api"
         // }
+      },
+      '/gc': {
+        target: 'http://localhost:3000',
+        pathRewrite: {
+          '^/gc': '/api',
+        },
       },
     },
   },

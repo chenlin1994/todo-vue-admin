@@ -20,7 +20,7 @@
 </template>
 <script>
 import Vue from 'vue'
-import { ACCESS_TOKEN } from '@/store/mutation-types'
+// import { ACCESS_TOKEN } from '@/store/mutation-types'
 import mixin from './mixin'
 export default {
   name:'gUpload',
@@ -70,7 +70,7 @@ export default {
         },
       ],
       tokenHeader: {
-        'X-Access-Token': Vue.ls.get(ACCESS_TOKEN),
+        'X-Access-Token': Vue.ls.get('ACCESS_TOKEN'),
       },
       uploadUrl: '/api/poros-oss/file/upload',
       downLoadUrl: '/api/poros-oss/file/download', // query {path:''}
