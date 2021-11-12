@@ -11,7 +11,9 @@
         <img src="../assets/logo.png" alt="logo" class="logo" />
         <ul>
           <li>
-            <router-link to="/home" class="active">首页</router-link>
+            <router-link to="/home" :class="{ active: active('view-design') }"
+              >首页</router-link
+            >
           </li>
           <li>
             <a href="https://jackchen0120.github.io/vueDataV/" target="_blank"
@@ -31,7 +33,18 @@
             >
           </li>
           <li>
-            <router-link to="/ant-design-vue">ant-design-vue</router-link>
+            <router-link
+              to="/ant-design-vue"
+              :class="{ active: active('ant-design-vue') }"
+              >ant-design-vue</router-link
+            >
+          </li>
+          <li>
+            <router-link
+              to="/ant-design-vue-demo"
+              :class="{ active: active('ant-design-vue-demo') }"
+              >ant-design-vue-demo</router-link
+            >
           </li>
         </ul>
       </div>
@@ -124,8 +137,11 @@ export default {
       },
     }
   },
-  computed: {},
-  created() {},
+  computed: {
+    active() {
+      return (value) => this.$route.name === value
+    },
+  },
   mounted() {},
   methods: {
     // 点击头像下拉菜单选择

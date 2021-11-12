@@ -24,12 +24,11 @@ export default {
     Footer,
   },
   computed: {},
-  created() {
-  },
+  created() {},
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped >
 .content {
   height: calc(100% - 60px);
   padding: 30px 40px;

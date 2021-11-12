@@ -16,7 +16,7 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import('@/views/Home.vue'),
-    redirect:'/view-design',
+    redirect: '/view-design',
     meta: {
       title: '首页',
       requireAuth: true,
@@ -37,6 +37,15 @@ const routes = [
         component: () => import('@/views/pages/ant-design-vue.vue'),
         meta: {
           title: 'ant-design-vue',
+          requireAuth: true,
+        },
+      },
+      {
+        path: 'ant-design-vue-demo',
+        name: 'ant-design-vue-demo',
+        component: () => import('@/views/pages/ant-design-vue-demo.vue'),
+        meta: {
+          title: 'ant-design-vue-demo',
           requireAuth: true,
         },
       },
