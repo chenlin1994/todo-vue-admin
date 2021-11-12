@@ -36,13 +36,13 @@ module.exports = {
   devServer: {
     port: 8082,
     proxy: {
-      '/api/poros-permission': {
-        target: 'http://localhost:3000',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api/poros-permission': '/api/poros-permission',
-        },
-      },
+      // '/api/poros-permission': {
+      //   target: 'http://localhost:3000',
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     '^/api/poros-permission': '/api/poros-permission',
+      //   },
+      // },
       '/api': {
         // target: 'http://106.55.168.13:8082',
         target: 'http://localhost:8088',

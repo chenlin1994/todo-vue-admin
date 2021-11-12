@@ -70,7 +70,7 @@ export default {
         },
       ],
       tokenHeader: {
-        'X-Access-Token': Vue.ls.get('ACCESS_TOKEN'),
+        // 'X-Access-Token': Vue.ls.get('ACCESS_TOKEN'),
       },
       uploadUrl: '/api/poros-oss/file/upload',
       downLoadUrl: '/api/poros-oss/file/download', // query {path:''}
