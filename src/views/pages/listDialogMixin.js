@@ -1,3 +1,4 @@
+import { postAction, getAction, putAction, deleteAction } from '@/utils/network'
 export default {
   data() {
     return {
@@ -5,15 +6,26 @@ export default {
       form: {},
     }
   },
+  watch: {
+    visible(val) {
+      !val && this.$refs.form.resetFields()
+    },
+  },
   methods: {
-    init() {
+    init(form) {
       this.visible = true
-      this.$refs.form.resetFields()
+      this.$nextTick(() => {
+        for (let i in this.form) {
+          if (this.form.hasOwnProperty(i)) {
+            this.form[i] = form[i]
+          }
+        }
+      })
     },
     submit() {
       this.$refs.form.validate((valid) => {
         if (valid) {
-          this.$emit('submit', submit)
+          this.$emit('submit', this.form)
         } else {
           return false
         }

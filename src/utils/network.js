@@ -71,7 +71,7 @@ const putAction = (url,data={}) => service({
   url:url,
   params:data
 })
-const deleteAction = (data) => service({
+const deleteAction = (url,data) => service({
   method:'delete',
   url:url,
   

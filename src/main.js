@@ -27,8 +27,9 @@ import {
   Pagination,
   Message,
   FormModel,
-  // FormItem,
+  FormModelItem,
   Icon,
+  Popconfirm
 } from 'ant-design-vue'
 import '@/styles/base.scss'
 import 'view-design/dist/styles/iview.css'
@@ -41,7 +42,7 @@ Vue.component(Checkbox.name, Checkbox)
 Vue.component(DatePicker.name, DatePicker)
 Vue.component(Divider.name, Divider)
 Vue.component(Input.name, Input)
-Vue.component(InputNumber.name,InputNumber)
+Vue.component(InputNumber.name, InputNumber)
 Vue.component(Modal.name, Modal)
 Vue.component(Radio.name, Radio)
 Vue.component(Select.name, Select)
@@ -54,9 +55,9 @@ Vue.component(Upload.name, Upload)
 Vue.component(Button.name, Button)
 Vue.component(Pagination.name, Pagination)
 Vue.component(Tooltip.name, Tooltip)
-Vue.component(FormModel.name, FormModel)
 Vue.component(Icon.name, Icon)
-// Vue.component(FormItem.name, FormItem)
+Vue.use(FormModel)
+Vue.use(Popconfirm)
 Vue.use(EditTable)
 Vue.directive('drag', {
   bind(el, binding, vnode, oldVnode) {
