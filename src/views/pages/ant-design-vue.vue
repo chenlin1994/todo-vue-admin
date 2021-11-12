@@ -249,7 +249,7 @@ export default {
           rawFields: ['name', 'id', 'uid'],
           keyMap: { name: 'name', id: 'id1', uid: 'uid1' },
           conChar: ',',
-          url: '/poros-permission/secStaff/list',
+          url: '/gc/poros-permission/secStaff/list',
           showIndex: true,
           type: 'checkbox',
           callBackKeyArr: ['uid1', 'id1'],

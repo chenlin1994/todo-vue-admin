@@ -36,6 +36,13 @@ module.exports = {
   devServer: {
     port: 8082,
     proxy: {
+      '/api/gc': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api/gc': '/api/',
+        },
+      },
       '/api': {
         // target: 'http://106.55.168.13:8082',
         target: 'http://localhost:8088',
@@ -44,12 +51,6 @@ module.exports = {
         // pathRewrite: {
         //   "^/api": "/api"
         // }
-      },
-      '/gc': {
-        target: 'http://localhost:3000',
-        pathRewrite: {
-          '^/gc': '/api',
-        },
       },
     },
   },
