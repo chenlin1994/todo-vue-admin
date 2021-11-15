@@ -508,16 +508,19 @@ export default {
       })
     },
     add() {
-      console.log('占位')
+      this.originDataSource.push({
+        id: Date.now(),
+        ..._.cloneDeep(this.dataTempl),
+      })
+    },
+    del(i) {
+      this.originDataSource.splice(i, 1)
     },
     submit() {
       console.log('占位')
       this.$refs.form.check().then((data) => {
         this.$refs.editTable.check(data)
       })
-    },
-    del() {
-      console.log('占位')
     },
     cancel() {
       this.reset()
