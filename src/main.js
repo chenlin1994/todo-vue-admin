@@ -61,8 +61,8 @@ Vue.use(Popconfirm)
 Vue.use(EditTable)
 Vue.directive('drag', {
   bind(el, binding, vnode, oldVnode) {
-    const dialogHeaderEl = el.querySelector('.poros-modal-header')
-    const dragDom = el.querySelector('.poros-modal')
+    const dialogHeaderEl = el.querySelector('.ant-modal-header')
+    const dragDom = el.querySelector('.ant-modal')
     if (!dialogHeaderEl) {
       return
     }

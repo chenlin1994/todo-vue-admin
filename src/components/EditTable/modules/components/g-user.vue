@@ -411,7 +411,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .g-check-error {
-  /deep/ .poros-input {
+  /deep/ .ant-input {
     border: 1px solid #ff4d4f;
     border-width: 1px !important;
     outline: 0;
@@ -420,8 +420,8 @@ export default {
     }
   }
 }
-/deep/ .poros-input-groua-addon {
-  .poros-btn {
+/deep/ .ant-input-groua-addon {
+  .ant-btn {
     height: 32px;
   }
 }

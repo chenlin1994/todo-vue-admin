@@ -133,7 +133,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .g-check-error {
-  /deep/ .poros-upload {
+  /deep/ .ant-upload {
     border: 1px solid #ff4d4f;
     border-width: 1px !important;
     outline: 0;

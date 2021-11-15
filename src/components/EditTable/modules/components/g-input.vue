@@ -70,10 +70,10 @@ export default {
 </script>
 <style lang="less" scoped>
 .g-check-error {
-  /deep/ .poros-input,
+  /deep/ .ant-input,
   input,
   textarea,
-  .poros-input-number {
+  .ant-input-number {
     border-color: #ff4d4f;
     border-width: 1px !important;
     outline: 0;
@@ -85,7 +85,7 @@ export default {
     }
   }
 }
-/deep/ .poros-input-suffix{
+/deep/ .ant-input-suffix{
   z-index: 0;
 }
 </style>

@@ -233,10 +233,10 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-/deep/ .poros-input-number {
+/deep/ .ant-input-number {
   width: 100%;
 }
-/deep/ .poros-row.poros-form-item {
+/deep/ .ant-row.ant-form-item {
   display: flex;
 }
 </style>

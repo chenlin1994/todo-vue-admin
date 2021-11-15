@@ -244,36 +244,36 @@ export default {
     },
     initColunsHeight() {
       const scrollDiv = this.$refs.pTable.$el.querySelector(
-        '.poros-table-scroll .poros-table-body'
+        '.ant-table-scroll .ant-table-body'
       )
       const leftFixedDiv = this.$refs.pTable.$el.querySelector(
-        '.poros-table-fixed-left .poros-table-body-inner'
+        '.ant-table-fixed-left .ant-table-body-inner'
       )
       const rightFixedDiv = this.$refs.pTable.$el.querySelector(
-        '.poros-table-fixed-right .poros-table-body-inner'
+        '.ant-table-fixed-right .ant-table-body-inner'
       )
       const scrollBox = this.$refs.pTable.$el.querySelector(
-        '.poros-table-scroll'
+        '.ant-table-scroll'
       )
       const rightDiv = this.$refs.pTable.$el.querySelector(
-        '.poros-table-fixed-right'
+        '.ant-table-fixed-right'
       )
       const leftDiv = this.$refs.pTable.$el.querySelector(
-        '.poros-table-fixed-left'
+        '.ant-table-fixed-left'
       )
-      let arrs = scrollDiv.querySelectorAll('.poros-table-row')
+      let arrs = scrollDiv.querySelectorAll('.ant-table-row')
       let objarr = []
       rightDiv &&
         (rightDiv.querySelector(
-          '.poros-table-thead'
+          '.ant-table-thead'
         ).style.height = getComputedStyle(
-          scrollBox.querySelector('.poros-table-thead')
+          scrollBox.querySelector('.ant-table-thead')
         ).height)
       leftDiv &&
         (leftDiv.querySelector(
-          '.poros-table-thead'
+          '.ant-table-thead'
         ).style.height = getComputedStyle(
-          scrollBox.querySelector('.poros-table-thead')
+          scrollBox.querySelector('.ant-table-thead')
         ).height)
       arrs.forEach((item) => {
         let rowKey = item.getAttribute('data-row-key')

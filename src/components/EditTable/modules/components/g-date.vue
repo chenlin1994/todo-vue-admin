@@ -79,8 +79,8 @@ export default {
 </script>
 <style lang="less" scoped>
 .g-check-error {
-  /deep/ .poros-calendar-picker,
-  .poros-calendar-picker {
+  /deep/ .ant-calendar-picker,
+  .ant-calendar-picker {
     border: 1px solid #ff4d4f;
     border-width: 1px !important;
     outline: 0;
@@ -89,7 +89,7 @@ export default {
     }
   }
 }
-/deep/ .poros-input[readonly='true'] {
+/deep/ .ant-input[readonly='true'] {
   background: none;
 }
 </style>

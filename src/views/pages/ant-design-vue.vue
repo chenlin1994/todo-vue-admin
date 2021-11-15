@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="toolbar">
+    <div class="toolbars">
       <a-button type="primary" @click="addNew">新增</a-button>
     </div>
     <a-table
@@ -512,10 +512,24 @@ export default {
     },
     submit() {
       console.log('占位')
+      this.$refs.form.check().then((data) => {
+        this.$refs.editTable.check(data)
+      })
     },
     del() {
       console.log('占位')
     },
+    cancel() {
+      this.reset()
+      this.$refs['modal'].visible = false
+    },
+    reset() {
+      this.$refs['form'].resetFields()
+      this.$refs['editTable']._provided.provObj.errorCheck = false
+    },
   },
 }
 </script>
+<style lang="less" scoped>
+@import '../../style/common.less';
+</style>

@@ -197,7 +197,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .g-check-error {
-  /deep/ .poros-input {
+  /deep/ .ant-input {
     border: 1px solid #ff4d4f;
     border-width: 1px !important;
     outline: 0;
@@ -206,7 +206,7 @@ export default {
     }
   }
 }
-/deep/ .poros-select {
+/deep/ .ant-select {
   width: 100%;
 }
 </style>
