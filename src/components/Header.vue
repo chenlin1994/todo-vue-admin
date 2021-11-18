@@ -16,23 +16,6 @@
             >
           </li>
           <li>
-            <a href="https://jackchen0120.github.io/vueDataV/" target="_blank"
-              >大数据可视化平台</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://juejin.im/user/5eafd5fff265da7be959f56a"
-              target="_blank"
-              >掘金·博文</a
-            >
-          </li>
-          <li>
-            <a href="https://blog.csdn.net/qq_15041931" target="_blank"
-              >CSDN·博文</a
-            >
-          </li>
-          <li>
             <router-link
               to="/ant-design-vue"
               :class="{ active: active('ant-design-vue') }"
@@ -46,9 +29,23 @@
               >ant-design-vue-demo</router-link
             >
           </li>
+          <li>
+            <a href="http://localhost:8083" target="_blank">大数据可视化平台</a>
+          </li>
+          <li>
+            <a
+              href="https://juejin.im/user/5eafd5fff265da7be959f56a"
+              target="_blank"
+              >掘金·博文</a
+            >
+          </li>
+          <li>
+            <a href="https://blog.csdn.net/qq_15041931" target="_blank"
+              >CSDN·博文</a
+            >
+          </li>
         </ul>
       </div>
-
       <Dropdown trigger="hover" @on-click="changeMenu">
         <a class="dropdown-link" href="javascript:void(0)">
           <span class="username">{{ username }}</span>
